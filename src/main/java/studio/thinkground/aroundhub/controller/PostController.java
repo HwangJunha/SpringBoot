@@ -12,7 +12,12 @@ import studio.thinkground.aroundhub.dto.MemberDTO;
 @RestController
 @RequestMapping("/api/v1/post-api")
 public class PostController {
-    
+    //http://localhost:8088/api/vi/post-api/default
+    @PostMapping(value = "default")
+    public String postMethod(){
+        return "Hello World!";
+    }
+
 
     //http://localhost:8088/api/vi/post-api/member
     @PostMapping(value = "/member")
